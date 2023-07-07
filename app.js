@@ -9,7 +9,7 @@ require('./db/conn');
 
 app.use(bodyParser.json());
 app.use(cors({
-  origin: ["https://fodrix-frontend.vercel.app"],
+  origin: ["https://fodrix.netlify.app"],
   methods: ["POST", "GET"], 
   credentials: true 
 }));

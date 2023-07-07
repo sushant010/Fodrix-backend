@@ -10,7 +10,7 @@ require('./db/conn');
 app.use(bodyParser.json());
 app.use(cors({
   origin: ["https://fodrix-frontend.vercel.app"],
-  methods: ["POST", "GET"],
+  methods: ["POST", "GET"], 
   credentials: true 
 }));
 
@@ -27,6 +27,7 @@ const PORT = process.env.PORT;
 app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
+
 
 app.use("/addCallBack", callbackRoutes);
 app.use("/getCallbacks", callbackRoutes);

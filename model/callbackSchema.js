@@ -8,7 +8,11 @@ const callbackSchema = new mongoose.Schema({
   mobile: String,
   typeOfPhotoshoot: String,
   city: String,
-  comments: String
+  comments: String,
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
 const Callback = mongoose.model('Callback', callbackSchema);
